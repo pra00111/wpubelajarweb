@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select & Textarea</title>
+  </head>
+  <body>
+    <h3>pilih kota</h3>
+    <form>
+      <select name="kota" id="kota">
+        <option>--pilih kota--</option>
+        <option value="jakarta">Jakarta</option>
+        <option value="surabaya">Surabaya</option>
+        <option value="bandung">Bandung</option>
+        <option value="medan" selected>Medan</option>
+      </select>
+      <br />
+      <h3>Pesan</h3>
+      <textarea
+        name="pesan"
+        id="pesan"
+        cols="30"
+        rows="5"
+        placeholder="Masukan pesan"
+      ></textarea>
+      <br /><br />
+      <button type="submit">Kirim</button>
+    </form>
+  </body>
+</html>

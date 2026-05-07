@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coba CSS - Font Styling</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+      @font-face {
+        font-family: lobster;
+        src: url(font/Lobster-Regular.ttf) format(truetype);
+        font-weight: normal;
+        font-style: normal;
+        font-style: swap;
+      }
+      h1 {
+        font-size: 120px;
+        font-family: "Bitcount", Arial, Helvetica, sans-serif;
+        color: lightblue;
+        text-align: center;
+      }
+      p {
+        font-size: 30px;
+        font-family: "Lora", Arial, Helvetica, sans-serif;
+        color: navy;
+        text-align: center;
+      }
+      .font-lobster {
+        font-family: lobster;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hellow World</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+      reprehenderit architecto corporis quaerat tenetur cum laborum voluptate
+      labore quibusdam ullam!
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus at iste
+      ipsa modi a minus in, quod laudantium numquam. Quam.
+    </p>
+    <p class="font-lobster">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequuntur
+      doloremque voluptates expedita placeat pariatur?
+    </p>
+  </body>
+</html>

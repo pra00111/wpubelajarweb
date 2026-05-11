@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Simple Selectors</title>
+    <style>
+      /* UNIVERSAL SELECTOR */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* TYPE SELECTOR (Nama Tag) */
+      h3 {
+        color: navy;
+      }
+      p {
+        color: #333;
+      }
+      /* CLASS SELECTOR */
+      .highlight {
+        background-color: khaki;
+        padding: 5px;
+        font-weight: bold;
+      }
+      /* ID SELECTOR */
+      #heading {
+        color: crimson;
+        text-align: center;
+        background-color: lightcoral;
+      }
+      /*GROUPING SELECTOR */
+      i,
+      span {
+        color: rgb(185, 190, 190);
+      }
+      /*ATTRIBUTE SELECTOR */
+      input[type="text"] {
+        border: 2px solid teal;
+        padding: 5px;
+      }
+      a[href] {
+        color: green;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="heading">Belajar Simple Selectors</h1>
+
+    <h3>Judul Artikel 1</h3>
+    <p>Paragraf biasa tanpa class.</p>
+
+    <h3>Judul Artikel 2</h3>
+    <p class="highlight">
+      Paragraf ini diberi tanda stabilo menggunakan Class .highlight
+    </p>
+    <span class="highlight">Span ini juga pakai class .highlight</span>
+
+    <hr />
+
+    <form>
+      <label>Nama (Input Teks):</label>
+      <input type="text" name="nama" placeholder="Masukkan Nama" />
+      <br /><br />
+      <label>Password:</label>
+      <input type="password" name="password" />
+    </form>
+
+    <br />
+
+    <p>
+      <i>Ini elemen miring</i> dan <span>ini elemen span</span>. Lorem ipsum
+      dolor sit amet consectetur, adipisicing elit. Consectetur, incidunt?
+    </p>
+
+    <a href="https://wpucourse.id">WPUCourse.id</a>
+  </body>
+</html>

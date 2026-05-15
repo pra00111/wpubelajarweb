@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+header .genre-tag {
+  margin-top: 10px;
+}
+
+header .genre-tag .tag {
+  display: inline-block;
+  background-color: #06b6d4;
+  color: #fff;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main .profile-card {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+main .profile-card .artis-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid #06b6d4;
+}
+
+main .profile-card .bio {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main .profile-card .bio p {
+  margin-bottom: 15px;
+}
+
+main .profile-card .stats {
+  margin-top: 20px;
+}
+
+main .profile-card .stats .stat-item {
+  display: inline-block;
+  width: 150px;
+  padding: 20px;
+  margin: 0 15px;
+  color: #f8f8f8;
+  background-color: #06b6d4;
+  border: 2px solid #7de6f9;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(16, 95, 164, 0.2);
+}
+
+main .profile-card .stats .stat-item .stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
+main .profile-card .stats .stat-item .stat-label {
+  font-size: 0.9rem;
+  color: #f8f8f8;
+}
+
+main .Discography {
+  margin: 50px 0;
+}
+
+main .Discography h2,
+main .social-link h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+main .Discography .album-list {
+  text-align: center;
+}
+
+main .Discography .album-list .album-card {
+  display: inline-block;
+  font-size: 0.9rem;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  padding: 10px;
+  background-color: #06b6d4;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(16, 95, 164, 0.3);
+}
+
+main .Discography .album-list .album-card img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(4, 56, 101, 0.3);
+}
+
+main .Discography .album-list .album-card p {
+  margin-bottom: 15px;
+}
+
+main .Discography .album-list .album-card .btn-listen {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #06b6d4;
+  color: white;
+  border: 2px solid #7de6f9;
+  border-radius: 8px;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main .Discography .album-list .album-card .btn-listen:hover {
+  background-color: #04a0c9;
+}
+
+main .Discography .album-list .album-card .btn-listen:active {
+  background-color: #0289a3;
+  transform: scale(0.98);
+}
+
+main .social-link {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px 0;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .social-link .social-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #06b6d4;
+  color: white;
+  border: 2px solid #7de6f9;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+main .social-link .social-btn:hover {
+  background-color: #04a0c9;
+}
+
+main .social-link .social-btn:active {
+  background-color: #0289a3;
+  transform: scale(0.98);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer a {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #06b6d4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

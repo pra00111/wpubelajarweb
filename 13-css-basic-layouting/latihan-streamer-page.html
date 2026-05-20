@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Z-Gamer | FPS Streamer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: #f1f5f9;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .top-banner {
+        background: linear-gradient(to right, #f59e0b, #fbbf24);
+        color: #0f172a;
+        text-align: center;
+        padding: 12px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      }
+
+      .navbar {
+        background-color: #1e293b;
+        padding: 15px 50px;
+        border-bottom: 2px solid #334155;
+        overflow: auto;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+      }
+
+      .navbar .nav-logo {
+        float: left;
+        color: #3b82f6;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+
+      .navbar .nav-menu {
+        float: right;
+        list-style: none;
+        margin-top: 5px;
+      }
+
+      .navbar .nav-menu li {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      .navbar .nav-menu li a {
+        color: #f1f5f9;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .navbar .nav-menu li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+
+      .navbar .nav-menu li a:hover::after {
+        width: 100%;
+      }
+
+      .navbar .nav-menu li a:hover {
+        color: #3b82f6;
+      }
+
+      .navbar .nav-menu li a.active {
+        color: #3b82f6;
+      }
+
+      main {
+        max-width: 1000px;
+        width: 90%;
+        margin: 40px auto;
+      }
+
+      main .bio {
+        background-color: #1e293b;
+        padding: 20px;
+        margin-bottom: 50px;
+        border-radius: 8px;
+        border: 1px solid #334155;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      main .bio .bio-img {
+        float: left;
+        width: 160px;
+        height: 160px;
+        border-radius: 12px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+      }
+
+      main .bio h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        background: linear-gradient(to right, #3b82f6, #ec4899);
+        background-clip: text;
+        color: transparent;
+      }
+
+      main .bio p {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      main .card-container {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+
+      main .card-container .profile-wrapper {
+        display: inline-block;
+        border: 5px solid #fff;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        position: relative;
+      }
+
+      main .card-container .profile-wrapper img {
+        max-width: 600px;
+        width: 100%;
+        display: block;
+      }
+
+      main .card-container .profile-wrapper .badge {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      main .schedule {
+        background-color: #0f172a;
+        padding: 30px;
+        margin-bottom: 50px;
+        border-radius: 8px;
+        border: 1px dashed #3b82f6;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      main .schedule ul {
+        list-style: none;
+        text-align: center;
+      }
+
+      main .schedule ul li {
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 10px;
+        transition: 0.3s ease;
+        border-radius: 12px;
+      }
+
+      main .schedule ul li b {
+        color: #345ff8;
+      }
+
+      main .schedule ul li:nth-child(even) {
+        font-weight: bold;
+        background-color: rgb(57, 73, 101, 0.5);
+        border-radius: 8px;
+      }
+
+      main .schedule ul li:hover {
+        color: #3b82f6;
+        transform: scale(1.02);
+      }
+
+      main .gallery {
+        text-align: center;
+      }
+
+      :is(.schedule, .gallery) h3 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+        background: linear-gradient(to right, #3b82f6, #ec4899);
+        background-clip: text;
+        color: transparent;
+      }
+
+      main .gallery .video-item {
+        display: inline-block;
+        text-align: left;
+        width: 220px;
+        margin: 10px;
+        background-color: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+      }
+
+      main .gallery .video-item img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      main .gallery .video-item .video-info {
+        padding: 15px;
+      }
+
+      main .gallery .video-item .video-info h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      main .gallery .video-item .video-info p {
+        font-size: 12px;
+        color: #94a3b8;
+      }
+
+      main .gallery .video-item:hover {
+        box-shadow: 0 10px 30px rgba(16, 187, 239, 0.4);
+        transform: translateY(-5px);
+        cursor: pointer;
+      }
+
+      main .gallery:has(.video-item:hover) .video-item:not(:hover) {
+        opacity: 0.5;
+        filter: grayscale(80%);
+      }
+
+      .chat-btn {
+        position: fixed;
+        bottom: 35px;
+        right: 35px;
+        width: 60px;
+        height: 60px;
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 40%;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 40px;
+        text-align: center;
+        line-height: 60px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        transition: 0.3s ease;
+      }
+
+      .chat-btn:hover {
+        background: color #2563eb;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Promo Banner -->
+    <div class="top-banner">
+      🚀 NEW MERCH DROP! USE CODE "ZPRO" FOR 20% OFF ALL HOODIES.
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="#" class="nav-logo">Z-GAMER </a>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- About Section -->
+      <section class="bio">
+        <img
+          src="https://picsum.photos/id/65/300/300"
+          alt="Z-Gamer Profile"
+          class="bio-img"
+        />
+        <h2>The Legend of Z-Gamer</h2>
+        <p>
+          Halo, saya Z-Gamer! Seorang veteran FPS yang sudah bergelut di dunia
+          kompetitif sejak tangan pertama. Saya memiliki kemampuan unik dalam
+          bermain FPS dan telah menjadi salah satu pemain terkemuka di dunia.
+        </p>
+        <p>
+          Dalam permainan ini, saya memiliki kemampuan eksplorasi yang luar
+          biasa dan memiliki kemampuan bertarung yang menakjubkan. Saya juga
+          memiliki kemampuan kreatif dalam merancang dan mengembangkan senjata
+          baru yang dapat membuat permainan menjadi lebih seru dan menarik.
+        </p>
+      </section>
+      <!-- Profile Status -->
+      <section class="card-container">
+        <figure class="profile-wrapper">
+          <span class="badge">● LIVE NOW</span>
+          <img
+            src="https://picsum.photos/id/96/800/800"
+            alt="Main Profile Display"
+          />
+        </figure>
+      </section>
+      <!-- Weekly Schedule -->
+      <section class="schedule">
+        <h3>🎮 Current Streaming Schedule</h3>
+        <ul>
+          <li>Senin: <b>19.00 - 22.00</b> (Ranked Grind)</li>
+          <li>Rabu: <b>19.00 - 22.00</b> (Aim Training)</li>
+          <li>Jumat: <b>20.00 - Late</b> (Horror Night Special)</li>
+          <li>Sabtu: <b>15.00 - 18.00</b> (Community Tournament)</li>
+        </ul>
+      </section>
+      <!-- Highlights Gallery -->
+      <section class="gallery">
+        <h3>Latest Highlights</h3>
+        <figure class="video-item">
+          <img src="https://picsum.photos/id/101/400/250" alt="Clip 1" />
+          <figcaption class="video-info">
+            <h4>Crazy 360 No Scope!</h4>
+            <p>1.2M Views • 12 hours ago</p>
+          </figcaption>
+        </figure>
+        <figure class="video-item">
+          <img src="https://picsum.photos/id/102/400/250" alt="Clip 2" />
+          <figcaption class="video-info">
+            <h4>New Meta? Best Weapon!</h4>
+            <p>850K Views • 1 day ago</p>
+          </figcaption>
+        </figure>
+        <figure class="video-item">
+          <img src="https://picsum.photos/id/103/400/250" alt="Clip 3" />
+          <figcaption class="video-info">
+            <h4>Clutch Master: 1 vs 4</h4>
+            <p>2.4M Views • 3 days ago</p>
+          </figcaption>
+        </figure>
+        <figure class="video-item">
+          <img src="https://picsum.photos/id/104/400/250" alt="Clip 4" />
+
+           
+
+          <figcaption class="video-info">
+            <h4>Top 5 Stream Fails</h4>
+            <p>400K Views • 1 week ago</p>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+    <!-- Chat Button -->
+    <a href="#" class="chat-btn" title="Join Discord Support">💬</a>
+  </body>
+</html>
